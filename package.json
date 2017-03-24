@@ -1,6 +1,6 @@
 {
   "name": "governify-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cli for governify ecosystem",
   "homepage": "https://github.com/isa-group/governify-cli",
   "main": "./src/index.js",
