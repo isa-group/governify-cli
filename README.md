@@ -98,7 +98,7 @@ gov test --infiniteRequests -u http://google.es -c 5  -m GET
 
 ## Latest release
 
-The version 0.0.1 is the latest stable version of project-template-nodejs component.
+The version 0.0.1 is the latest stable version of governify-cli component.
 see [release note](https://github.com/isa-group/governify-cli/releases/tag/0.0.1) for details.
 
 For running:
