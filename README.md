@@ -13,7 +13,7 @@ governify-cli$
 
  A prompt will be displayed as "governify-cli"
 
-### 2.1. Help inside own cli
+### 2.1. Help inside from the own cli
 
 ```bash
 governify-cli$ help
@@ -60,7 +60,7 @@ governify-cli$ testlimittime http://www.google.es GET 3 2
 You can interact with the command called gov
 
 
-### 3.1. Help outside cli
+### 3.1. Help from bash shell
 
 ```bash
 
