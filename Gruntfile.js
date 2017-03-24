@@ -1,6 +1,6 @@
 /*!
 #!/usr/bin/env node
-project-template-nodejs 0.0.0, built on: 2017-03-24
+project-template-nodejs 0.0.1, built on: 2017-03-24
 Copyright (C) 2017 ISA group
 http://www.isa.us.es/
 https://github.com/isa-group/governify-cli
