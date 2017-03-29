@@ -31,13 +31,10 @@ module.exports = (data) => {
         if (!data.path) {
             console.error(make_red('--path required'));
             //process.exit(1);
-        }else{
-          governifytester.doParallelRequestFromfile(data.path);
+        } else {
+            governifytester.doParallelRequestFromfile(data.path);
 
         }
-
-
-
 
     } else if (data.timeResquests) {
         if (!data.url || !data.method || !data.count || !data.duration) {
@@ -47,9 +44,12 @@ module.exports = (data) => {
 
     } else if (data.infiniteRequests) {
         if (!data.url || !data.method || !data.count) {
-          console.error(make_red('--count --url and --method are required for this option'));
+            console.error(make_red('--count --url and --method are required for this option'));
         }
         governifytester.doRequests(data.url, data.method, data.count, data.body);
+
+    } else {
+        console.error(make_red('Ops, your command is incorret, check out your sintax'));
 
     }
 };
