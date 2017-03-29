@@ -1,6 +1,6 @@
 /*!
 #!/usr/bin/env node
-governify-cli 0.0.3, built on: 2017-03-24
+governify-cli 0.0.4, built on: 2017-03-29
 Copyright (C) 2017 ISA group
 http://www.isa.us.es/
 https://github.com/isa-group/governify-cli

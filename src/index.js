@@ -31,7 +31,7 @@ const cli = require('./lib/cli');
 
 
 
-program.version("0.0.1");
+program.version("0.0.4");
 if (process.argv.length==2){
  cli();
 }
