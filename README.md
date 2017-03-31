@@ -1,3 +1,4 @@
+[![NPM](https://nodei.co/npm/governify-cli.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/governify-cli/)
 # governify-cli
 
 ## 1. Install governify-cli
