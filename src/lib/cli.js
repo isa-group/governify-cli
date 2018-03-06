@@ -19,83 +19,65 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 "use strict";
 
-const cli = require('vorpal')();
-const governifytester = require('governify-tester');
+const cli = require("vorpal")();
+const governifytester = require("governify-tester");
 const chalk = require("chalk");
-const exec = require('child_process').exec;
-
-
+const exec = require("child_process").exec;
 
 module.exports = function() {
-
-    cli.command('testlimittime <url> <method> <count> <duration> [body]').action(function(data, cb) {
-        governifytester.doParallelRequestWithDuration(data.url, data.method, data.count, data.duration, data.body).then(function() {
-            cb();
-
-        });
+  cli.command("testlimittime <url> <method> <count> <duration> [body]").action(function(data, cb) {
+    governifytester
+      .doParallelRequestWithDuration(decodeURIComponent(data.url), data.method, data.count, data.duration, data.body)
+      .then(function() {
+        cb();
+      });
+  });
+  cli.command("testinfinite <url> <method> <count>  [body]").action(function(data, cb) {
+    governifytester.doRequests(decodeURIComponent(data.url), data.method, data.count, data.body).then(function() {
+      cb();
     });
-    cli.command('testinfinite <url> <method> <count>  [body]').action(function(data, cb) {
-        governifytester.doRequests(data.url, data.method, data.count, data.body).then(function() {
-            cb();
+  });
 
-        });
+  cli.command("testfromfile <path>").action(function(args, cb) {
+    governifytester.doParallelRequestFromfile(args.path).then(function() {
+      cb();
     });
+  });
 
-
-    cli.command('testfromfile <path>')
-        .action(function(args, cb) {
-            governifytester.doParallelRequestFromfile(args.path).then(function() {
-                cb();
-
-            });
-        });
-
-
-
-    cli.command('ls [dir]').action(function(command, cb) {
-        let char = command.dir ? " " + command.dir : "";
-        exec('ls' + char, function(error, stdout, stderr) {
-            if (error !== null) {
-                console.log('exec error: ', error);
-                cb(stderr);
-            }
-            cb(stdout);
-
-        });
+  cli.command("ls [dir]").action(function(command, cb) {
+    let char = command.dir ? " " + command.dir : "";
+    exec("ls" + char, function(error, stdout, stderr) {
+      if (error !== null) {
+        console.log("exec error: ", error);
+        cb(stderr);
+      }
+      cb(stdout);
     });
+  });
 
-    cli.command('mkdir [dir]').action(function(command, cb) {
-        let char = command.dir ? " " + command.dir : "";
-        exec('mkdir' + char, function(error, stdout, stderr) {
-            if (error !== null) {
-                console.log('exec error: ', error);
-                cb(stderr);
-            }
-            cb(stdout);
-
-        });
+  cli.command("mkdir [dir]").action(function(command, cb) {
+    let char = command.dir ? " " + command.dir : "";
+    exec("mkdir" + char, function(error, stdout, stderr) {
+      if (error !== null) {
+        console.log("exec error: ", error);
+        cb(stderr);
+      }
+      cb(stdout);
     });
+  });
 
-
-    cli.command('pwd [dir]').action(function(command, cb) {
-        let char = command.dir ? " " + command.dir : "";
-        exec('pwd' + char, function(error, stdout, stderr) {
-            if (error !== null) {
-                console.log('exec error: ', error);
-                cb(stderr);
-            }
-            cb(stdout);
-
-        });
+  cli.command("pwd [dir]").action(function(command, cb) {
+    let char = command.dir ? " " + command.dir : "";
+    exec("pwd" + char, function(error, stdout, stderr) {
+      if (error !== null) {
+        console.log("exec error: ", error);
+        cb(stderr);
+      }
+      cb(stdout);
     });
+  });
 
-
-    cli
-        .delimiter(chalk.green('governify-cli$'))
-        .show();
-
-
+  cli.delimiter(chalk.green("governify-cli$")).show();
 };
