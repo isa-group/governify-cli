@@ -26,26 +26,26 @@ const chalk = require('chalk')
 module.exports = (data) => {
   if (data.readFromFile) {
     if (!data.path) {
-      console.error(make_red('--path required'))
+      console.error(makeRed('--path required'))
       // process.exit(1);
     } else {
       governifytester.doParallelRequestFromfile(data.path)
     }
   } else if (data.timeResquests) {
     if (!data.url || !data.method || !data.count || !data.duration) {
-      console.error(make_red('--count --url --duration and --method are required for this option'))
+      console.error(makeRed('--count --url --duration and --method are required for this option'))
     }
     governifytester.doParallelRequestWithDuration(data.url, data.method, data.count, data.duration, data.body)
   } else if (data.infiniteRequests) {
     if (!data.url || !data.method || !data.count) {
-      console.error(make_red('--count --url and --method are required for this option'))
+      console.error(makeRed('--count --url and --method are required for this option'))
     }
     governifytester.doRequests(data.url, data.method, data.count, data.body)
   } else {
-    console.error(make_red('Ops, your command is incorret, check out your sintax'))
+    console.error(makeRed('Ops, your command is incorret, check out your sintax'))
   }
 }
 
-function make_red (txt) {
+function makeRed (txt) {
   return chalk.red(txt) // display the help text in red on the console
 }

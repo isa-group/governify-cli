@@ -1,6 +1,6 @@
 {
     "name": "governify-cli",
-    "buildOn": "2018-04-30",
+    "buildOn": "2018-05-02",
     "version": "0.0.5",
     "description": "CLI for governify ecosystem",
     "homepage": "https://github.com/isa-group/governify-cli",

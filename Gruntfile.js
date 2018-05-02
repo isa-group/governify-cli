@@ -1,8 +1,8 @@
 /*!
-project-template-nodejs 1.1.1, built on: 2018-03-27
+governify-cli 0.0.5, built on: 2018-05-02
 Copyright (C) 2018 ISA group
 http://www.isa.us.es/
-https://github.com/isa-group/project-template-nodejs
+https://github.com/isa-group/governify-cli
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,11 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>. */
  ** DOCKER_HUB_EMAIL
  ** DOCKER_HUB_USERNAME
  ** DOCKER_HUB_PASSWORD
- *
- * CHANGES TO BE PERFORMED:
- *
- ** REPLACE "<my-image-name>" by your DockerHub image (without user)
- ** REPLACE "<my-github-repo>" by your github repo. Eg. isa-group/project-template-nodejs
  *
  */
 
@@ -153,7 +148,7 @@ module.exports = function (grunt) {
         afterRelease: [],
         updateVars: ['pkg'],
         github: {
-          repo: 'isa-group/project-template-nodejs',
+          repo: 'isa-group/governify-cli',
           accessTokenVar: 'GITHUB_ACCESS_TOKEN',
           usernameVar: 'GITHUB_USERNAME'
         }
@@ -162,7 +157,7 @@ module.exports = function (grunt) {
 
     // BUILDING AND PUSHING DOCKER IMAGES
     dockerize: {
-      '<my-image-name>-latest': {
+      'governify-cli-latest': {
         // CHANGEME: name of the image in dockerhub (without user)
         options: {
           auth: {
@@ -170,11 +165,11 @@ module.exports = function (grunt) {
             username: 'DOCKER_HUB_USERNAME',
             password: 'DOCKER_HUB_PASSWORD'
           },
-          name: '<my-image-name>', // CHANGEME: name of the image in dockerhub (without user)
+          name: 'governify-cli', // CHANGEME: name of the image in dockerhub (without user)
           push: true
         }
       },
-      '<my-image-name>-version': {
+      'governify-cli-version': {
         // CHANGEME: name of the image in dockerhub (without user)
         options: {
           auth: {
@@ -182,7 +177,7 @@ module.exports = function (grunt) {
             username: 'DOCKER_HUB_USERNAME',
             password: 'DOCKER_HUB_PASSWORD'
           },
-          name: '<my-image-name>', // CHANGEME: name of the image in dockerhub (without user)
+          name: 'governify-cli', // CHANGEME: name of the image in dockerhub (without user)
           tag: '<%= pkg.version %>',
           push: true
         }
