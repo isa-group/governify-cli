@@ -1,6 +1,23 @@
-// the tagRangeFinder function is
-//   Copyright (C) 2011 by Daniel Glazman <daniel@glazman.org>
-// released under the MIT license (../../LICENSE) like the rest of CodeMirror
+/*!
+governify-cli 0.0.5, built on: 2018-05-08
+Copyright (C) 2018 ISA group
+http://www.isa.us.es/
+https://github.com/isa-group/governify-cli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
+
+
 CodeMirror.tagRangeFinder = function(cm, start) {
   var nameStartChar = "A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD";
   var nameChar = nameStartChar + "\-\:\.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040";

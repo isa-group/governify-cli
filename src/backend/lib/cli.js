@@ -1,7 +1,6 @@
 /*!
-#!/usr/bin/env node
-governify-cli 0.0.4, built on: 2017-03-29
-Copyright (C) 2017 ISA group
+governify-cli 0.0.5, built on: 2018-05-08
+Copyright (C) 2018 ISA group
 http://www.isa.us.es/
 https://github.com/isa-group/governify-cli
 
@@ -16,8 +15,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
+
 
 'use strict'
 

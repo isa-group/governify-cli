@@ -1,5 +1,5 @@
 /*!
-governify-cli 0.0.5, built on: 2018-05-02
+governify-cli 0.0.5, built on: 2018-05-08
 Copyright (C) 2018 ISA group
 http://www.isa.us.es/
 https://github.com/isa-group/governify-cli
@@ -15,7 +15,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
+
 
 /**
  * USED ENV VARS:
