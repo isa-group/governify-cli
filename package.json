@@ -52,7 +52,7 @@
     "mocha": "^5.1.1",
     "plato": "^1.7.0",
     "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.14",
+    "webpack-cli": "^3.0.0",
     "webpack-monitor": "^1.0.14"
   },
   "scripts": {
