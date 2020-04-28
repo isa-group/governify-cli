@@ -117,7 +117,6 @@ For technical inquiry please contact to [engineering team](./extra/about.md).
 
 ## Latest release
 
-[![Build Status](https://travis-ci.org/isa-group/governify-cli.svg?branch=master)](https://travis-ci.org/http://github.com/isa-group/governify-cli)
 
 The version 0.0.5 is the latest stable version of governify-cli component.
 see [release note](http://github.com/isa-group/governify-cli/releases/tag/0.0.5) for details.
